@@ -1,0 +1,89 @@
+{
+  "hypers": [
+    {
+      "name": "learning_rate",
+      "type": "float",
+      "value": 0.00002
+    },
+    {
+      "name": "batch_size",
+      "type": "int",
+      "value": 8
+    },
+    {
+      "name": "accumulation_steps",
+      "type": "int",
+      "value": 4
+    },
+    {
+      "name": "n_epochs",
+      "type": "int",
+      "value": 30
+    },
+    {
+      "name": "dropout",
+      "type": "float",
+      "value": 0.1
+    },
+    {
+      "name": "model_name_or_path",
+      "type": "pretrain",
+      "value": "microsoft/layoutlmv3-base"
+    },
+    {
+      "name": "random_seed",
+      "type": "seed",
+      "value": null
+    },
+    {
+      "name": "alpha",
+      "type": "float",
+      "value": 0.5
+    },
+    {
+      "name": "beta",
+      "type": "float",
+      "value": 0.3
+    },
+    {
+      "name": "use_rel_pos",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "name": "use_stack_label",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "name": "stack_win_size",
+      "type": "int",
+      "value": 3
+    },
+    {
+      "name": "buffer_win_size",
+      "type": "int",
+      "value": 1
+    },
+    {
+      "name": "use_ptr",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "name": "use_auto_trunc",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "name": "use_font_size",
+      "type": "bool",
+      "value": false
+    },
+    {
+      "name": "use_wh",
+      "type": "bool",
+      "value": false
+    }
+  ]
+}

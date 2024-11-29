@@ -1,0 +1,113 @@
+name: "文档结构分析"
+type: "UserDefined"
+version: "1.0.0"
+num_gpu: 1
+
+hypers:
+  - name: "learning_rate"
+    type: float
+    default_value: 0.00001
+    default_feasible_space:
+      _type: loguniform
+      _value:
+        - 0.00001
+        - 0.0001
+    optional: true
+
+  - name: "batch_size"
+    type: int
+    default_value: 8
+    optional: true
+    default_feasible_space:
+      _type: choice
+      _value:
+        - 8
+        - 16
+        - 32
+  - name: "accumulation_steps"
+    type: int
+    default_value: 1
+    optional: true
+    default_feasible_space:
+      _type: choice
+      _value:
+        - 1
+        - 2
+        - 4
+  - name: "n_epochs"
+    type: int
+    default_value: 1
+    default_feasible_space:
+      _type: choice
+      _value:
+        - 10
+        - 20
+    optional: true
+  - name: "dropout"
+    type: float
+    default_value: 0.3
+    default_feasible_space:
+      _type: choice
+      _value:
+        - 0.2
+        - 0.3
+    optional: true
+  - name: "model_name_or_path"
+    type: pretrain
+    default_value: "bert-base-uncased"
+    optional: true
+  - name: "random_seed"
+    type: seed
+    default_value: null
+    optional: true
+  - name: "alpha"
+    type: float
+    default_value: 0.3
+    default_feasible_space:
+      _type: choice
+      _value:
+        - 0.3
+        - 0.5
+    optional: true
+  - name: "use_rel_pos"
+    type: bool
+    default_value: false
+    optional: true
+  - name: "use_stack_label"
+    type: bool
+    default_value: false
+    optional: true
+  - name: "stack_win_size"
+    type: int
+    default_value: 3
+    optional: true
+  - name: "buffer_win_size"
+    type: int
+    default_value: 1
+    optional: true
+  - name: "use_ptr"
+    type: bool
+    default_value: false
+    optional: true
+  - name: "beta"
+    type: float
+    default_value: 0.5
+    default_feasible_space:
+      _type: choice
+      _value:
+        - 0.3
+        - 0.5
+  - name: "use_auto_trunc"
+    type: bool
+    default_value: false
+    optional: true
+  - name: "use_font_size"
+    type: bool
+    default_value: false
+    optional: true
+  - name: "use_wh"
+    type: bool
+    default_value: false
+    optional: true
+
+
